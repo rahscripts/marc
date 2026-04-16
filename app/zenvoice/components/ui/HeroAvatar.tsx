@@ -1,3 +1,5 @@
+import FiveStars from "./FiveStars"
+
 export default function HeroAvatar() { 
     return (
           <div className="flex gap-2 mt-3">
@@ -29,13 +31,7 @@ export default function HeroAvatar() {
   </div>
 </div>
 <div className="flex flex-col items-start gap-2 ">
-<div className="rating">
-  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="2 star" />
-  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="3 star" />
-  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="4 star" />
-  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="5 star" defaultChecked/>
-</div>
+<FiveStars/>
 <div>
     <p>
         1675 founders sleep better
