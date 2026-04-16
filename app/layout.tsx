@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Gabarito } from "next/font/google";
 import "./globals.css";
 
 
@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   title: "Marc Louvin",
   description: "Learning Frontend by building landing page of marc louvin apps",
 };
+
+const gabarito = Gabarito({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 
 export default function RootLayout({
   children,
@@ -16,7 +22,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={` h-full antialiased`}
+      className={`${gabarito.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
