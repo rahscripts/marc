@@ -16,7 +16,7 @@ export default function ZenvoicePage() {
     ];
     return (
         <div className="max-w-5xl mx-auto w-full">
-            <section className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-emerald-500/20">
+            <section className="w-screen h-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-emerald-500/20">
                 <div className="max-w-5xl mx-auto w-full">
                     <LandingHeader />
                     <section className="h-screen flex mt-30 items-center justify-start flex-col gap-6 text-center px-4">
