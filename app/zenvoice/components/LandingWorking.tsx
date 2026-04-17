@@ -101,7 +101,7 @@ export default function LandingWorking() {
     return (
         <section className="py-20 px-4 max-md:px-8">
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-5xl text-gray-900 font-extrabold tracking-tight mb-12 text-center">
+                <h1 className="text-5xl text-gray-900 font-extrabold tracking-tight mb-20 text-center">
                     Self-serve invoices for your customers, bulk download for you
                 </h1>
 
@@ -114,7 +114,11 @@ export default function LandingWorking() {
                                 className="border border-gray-200 rounded-lg overflow-hidden"
                             >
                                 <button
-                                    onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
+                                    onClick={() => {
+                                        if (openIndex !== index) {
+                                            setOpenIndex(index);
+                                        }
+                                    }}
                                     className={`w-full px-6 py-4 flex items-center justify-between font-semibold transition-colors ${
                                         openIndex === index
                                             ? "bg-gray-100 text-gray-900"
@@ -122,12 +126,16 @@ export default function LandingWorking() {
                                     }`}
                                 >
                                     <span>{feature.title}</span>
-                                    <span className="text-xl">
-                                        {openIndex === index ? "−" : "+"}
+                                    <span className={`text-xl transition-transform duration-300 ${
+                                        openIndex === index ? "rotate-45" : "rotate-0"
+                                    }`}>
+                                        +
                                     </span>
                                 </button>
 
-                                {openIndex === index && (
+                                <div className={`overflow-hidden transition-all duration-500 ease-out ${
+                                    openIndex === index ? "max-h-96" : "max-h-0"
+                                }`}>
                                     <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
                                         <p className="text-gray-600 text-sm mb-4">
                                             {feature.description}
@@ -136,7 +144,7 @@ export default function LandingWorking() {
                                             {feature.content}
                                         </div>
                                     </div>
-                                )}
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -154,29 +162,37 @@ export default function LandingWorking() {
                 </div>
 
                 {/* Bottom Testimonial */}
-                <div className="mt-20 flex flex-col items-center justify-center gap-8">
+                <div className="flex flex-col items-center justify-center gap-6 mt-20">
                     <FiveStars />
-                    <div className="text-center max-w-2xl">
-                        <p className="text-gray-700 text-lg leading-relaxed">
-                            I added the ZenVoice link in the welcome email. So if anyone wants to have the invoice then it&apos;s self-serve. I deploy it once
-                            <span className="bg-yellow-100 px-1 mx-1">and I don&apos;t need to care anymore.</span>
-                        </p>
+
+                    <div className="space-y-4 text-center">
+                        <p>
+                            I added the ZenVoice link in the welcome email. So if anyone <br /> wants to have the invoice then it&apos;s self-serve. I deploy it once <br /> 
+                            and <span className="bg-yellow-100/50 px-1">I don&apos;t need to care anymore.</span></p>
                     </div>
-                    <div className="flex gap-3 items-center">
-                        <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
-                            <Image
-                                src={zenvoicelogo}
-                                alt="Philipp Keller"
-                                width={48}
-                                height={48}
-                                className="w-full h-full object-cover"
-                            />
+
+                    <div className="flex gap-3">
+                        <div className="avatar">
+                            <div className="w-12 rounded-full">
+                                <Image
+                                    src={zenvoicelogo}
+                                    alt="Philipp Keller"
+                                    width={48}
+                                    height={48}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
                         </div>
-                        <div>
-                            <h3 className="font-semibold text-gray-900">Philipp Keller</h3>
-                            <p className="text-sm text-gray-600">6,717 followers on 𝕏</p>
+                        <div className="flex items-start flex-col ">
+                            <h1 className="font-bold">
+                                Philipp Keller
+                            </h1>
+                            <p>
+                                6,717 followers on 𝕏
+                            </p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
