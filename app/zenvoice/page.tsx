@@ -3,6 +3,7 @@ import GetZenvoiceBtn from "./components/ui/GetZenvoiceBtn";
 import HeroAvatar from "./components/ui/HeroAvatar";
 import FiveStars from "./components/ui/FiveStars";
 import LandingComparison from "./components/LandingComparison";
+import LandingWorking from "./components/LandingWorking";
 
 
 
@@ -46,6 +47,7 @@ export default function ZenvoicePage() {
                 </div>
             </section>
             <LandingComparison />
+            <LandingWorking />
         </div>
     )
 }
