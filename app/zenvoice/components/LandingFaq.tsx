@@ -70,11 +70,11 @@ This is useful for accounting, tax reporting, or simply keeping your records org
   }
 ];
     return (
-        <section className="py-20 px-6 max-md:px-8">
+        <section className="py-20 px-6 max-md:px-4">
             <div className="max-w-7xl mx-auto">
                 <div className="flex max-md:flex-col max-md:gap-10">
                     {/* Left Side */}
-                    <div className="flex-1">
+                    <div className="flex-1 max-md:px-1">
                         <p className="text-sm font-semibold text-teal-600 mb-2">FAQ</p>
                         <h1 className="text-4xl font-extrabold text-gray-900">Frequently Asked Questions</h1>
                     </div>
@@ -82,7 +82,7 @@ This is useful for accounting, tax reporting, or simply keeping your records org
                     {/* Right Side - Accordion */}
                     <div className="lg:col-span-2 space-y-3 flex-1">
                         {faqs.map((faq, index) => (
-                            <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
+                            <div key={index} className="border-t border-slate-200 overflow-hidden">
                                 <button
                                     onClick={() => {
                                         const newIndices = new Set(openIndices);
@@ -93,25 +93,24 @@ This is useful for accounting, tax reporting, or simply keeping your records org
                                         }
                                         setOpenIndices(newIndices);
                                     }}
-                                    className={`w-full px-6 py-4 flex items-center justify-between font-semibold transition-colors ${
+                                    className={`w-full px-2 py-4 flex cursor-pointer items-center justify-between font-bold transition-colors duration-200 ${
                                         openIndices.has(index)
-                                            ? "bg-teal-50 text-teal-900"
-                                            : "bg-white text-gray-900 hover:bg-gray-50"
+                                            ? "text-emerald-700"
+                                            : " text-gray-900"
                                     }`}
                                 >
                                     <span>{faq.question}</span>
-                                    <span className={`text-xl transition-transform duration-300 ${
-                                        openIndices.has(index) ? "rotate-45" : "rotate-0"
-                                    }`}>
-                                        +
+                                    <span className={`text-xl ${openIndices.has(index) ? "-rotate-360" : "rotate-0"} transition-transform duration-300`}>
+                                        {openIndices.has(index) ? 
+                                        '-' : '+'}
                                     </span>
                                 </button>
 
                                 <div className={`overflow-hidden transition-all duration-500 ease-out ${
                                     openIndices.has(index) ? "max-h-96" : "max-h-0"
                                 }`}>
-                                    <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                                        <p className="text-gray-600 text-sm leading-relaxed whitespace-pre-wrap">
+                                    <div className="px-6 max-md:px-2 py-4 ">
+                                        <p className="text-gray-600 font-semibold leading-relaxed whitespace-pre-wrap">
                                             {faq.answer.split('Stripe takes a 0.4% cut (up to $2.00) per sale').map((part, i) => (
                                                 i === 0 ? part : (
                                                     <span key={i}>
