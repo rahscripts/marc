@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
+import FiveStars from "./ui/FiveStars";
 
 export default function LandingFaq() {
 
@@ -10,68 +10,68 @@ export default function LandingFaq() {
 
 
     const faqs = [
-  {
-    question: "Why do I need ZenVoice?",
-    answer: `When you sell one-time payment products, Stripe takes a 0.4% cut (up to $2.00) per sale. With ZenVoice, you only pay once, and never again.
+        {
+            question: "Why do I need ZenVoice?",
+            answer: `When you sell one-time payment products, Stripe takes a 0.4% cut (up to $2.00) per sale. With ZenVoice, you only pay once, and never again.
 
 And if you don't pay for Stripe Invoicing, you will get customer requests asking for invoices. Stripe receipts aren't enough for most countries' regulations.
 
 Finally, Stripe invoices aren't editable. Your customers can't add VAT, Tax ID, or fix typos after the purchase is done.
 
 ZenVoice fixes all that.`
-  },
-  {
-    question: "Do I have to use Stripe?",
-    answer: "Yes"
-  },
-  {
-    question: "Does it work for one-time purchases?",
-    answer: "Yes! It's made for one-time purchases, to avoid paying 0.4% in Stripe fee (or up to $2 per invoice)."
-  },
-  {
-    question: "Does it work for Payment Links?",
-    answer: "Yes."
-  },
-  {
-    question: "Does it work for subscriptions?",
-    answer: "Yes."
-  },
-  {
-    question: "Does it work if I don’t use Stripe Invoicing?",
-    answer: ""
-  },
-  {
-    question: "Does it work for past transactions?",
-    answer: "It does. ZenVoice will check for successful payments on your Stripe accounts and generate invoices for any successful payments."
-  },
-  {
-    question: "Is it secure?",
-    answer: "Yes. We use restricted API keys to access your Stripe account using the minimum required data to generate invoices."
-  },
-  {
-    question: "Can customers edit invoices?",
-    answer: "Yes. They can edit the invoice to add their VAT number, Tax ID, or correct a typo in their name for instance."
-  },
-  {
-    question: "Can customers edit invoices? (VAT, Tax ID)",
-    answer: "Yes. They can edit the invoice to add their VAT number, Tax ID, or correct a typo in their name for instance. No more support requests."
-  },
-  {
-    question: "Can customers see other invoices?",
-    answer: "Customers can only generate, edit, and download invoices for their own successful payments. If your customer retrieves a payment, they will have to confirm their email address to access the payment data."
-  },
-  {
-    question: "Can I download all invoices for a period?",
-    answer: `
+        },
+        {
+            question: "Do I have to use Stripe?",
+            answer: "Yes"
+        },
+        {
+            question: "Does it work for one-time purchases?",
+            answer: "Yes! It's made for one-time purchases, to avoid paying 0.4% in Stripe fee (or up to $2 per invoice)."
+        },
+        {
+            question: "Does it work for Payment Links?",
+            answer: "Yes."
+        },
+        {
+            question: "Does it work for subscriptions?",
+            answer: "Yes."
+        },
+        {
+            question: "Does it work if I don’t use Stripe Invoicing?",
+            answer: ""
+        },
+        {
+            question: "Does it work for past transactions?",
+            answer: "It does. ZenVoice will check for successful payments on your Stripe accounts and generate invoices for any successful payments."
+        },
+        {
+            question: "Is it secure?",
+            answer: "Yes. We use restricted API keys to access your Stripe account using the minimum required data to generate invoices."
+        },
+        {
+            question: "Can customers edit invoices?",
+            answer: "Yes. They can edit the invoice to add their VAT number, Tax ID, or correct a typo in their name for instance."
+        },
+        {
+            question: "Can customers edit invoices? (VAT, Tax ID)",
+            answer: "Yes. They can edit the invoice to add their VAT number, Tax ID, or correct a typo in their name for instance. No more support requests."
+        },
+        {
+            question: "Can customers see other invoices?",
+            answer: "Customers can only generate, edit, and download invoices for their own successful payments. If your customer retrieves a payment, they will have to confirm their email address to access the payment data."
+        },
+        {
+            question: "Can I download all invoices for a period?",
+            answer: `
 Yes. From your dashboard, you can select a Stripe account and a date range, then fetch every payment made during that period. You can download each invoice individually as PDF, export the full list as CSV, or download all invoices at once as a ZIP file.
 
 This is useful for accounting, tax reporting, or simply keeping your records organized.
 `
-  }
-];
+        }
+    ];
     return (
         <section className="py-20 px-6 max-md:px-4">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto space-y-30">
                 <div className="flex max-md:flex-col max-md:gap-10">
                     {/* Left Side */}
                     <div className="flex-1 max-md:px-1">
@@ -93,22 +93,20 @@ This is useful for accounting, tax reporting, or simply keeping your records org
                                         }
                                         setOpenIndices(newIndices);
                                     }}
-                                    className={`w-full px-2 py-4 flex cursor-pointer items-center justify-between font-bold transition-colors duration-200 ${
-                                        openIndices.has(index)
+                                    className={`w-full px-2 py-4 flex cursor-pointer items-center justify-between font-bold transition-colors duration-200 ${openIndices.has(index)
                                             ? "text-emerald-700"
                                             : " text-gray-900"
-                                    }`}
+                                        }`}
                                 >
                                     <span>{faq.question}</span>
                                     <span className={`text-xl ${openIndices.has(index) ? "-rotate-360" : "rotate-0"} transition-transform duration-300`}>
-                                        {openIndices.has(index) ? 
-                                        '-' : '+'}
+                                        {openIndices.has(index) ?
+                                            '-' : '+'}
                                     </span>
                                 </button>
 
-                                <div className={`overflow-hidden transition-all duration-500 ease-out ${
-                                    openIndices.has(index) ? "max-h-96" : "max-h-0"
-                                }`}>
+                                <div className={`overflow-hidden transition-all duration-500 ease-out ${openIndices.has(index) ? "max-h-96" : "max-h-0"
+                                    }`}>
                                     <div className="px-6 max-md:px-2 py-4 ">
                                         <p className="text-gray-600 font-semibold leading-relaxed whitespace-pre-wrap">
                                             {faq.answer.split('Stripe takes a 0.4% cut (up to $2.00) per sale').map((part, i) => (
@@ -124,6 +122,37 @@ This is useful for accounting, tax reporting, or simply keeping your records org
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+                <div>
+                    <div className="flex flex-col items-center justify-center gap-6">
+                        <FiveStars />
+
+                        <div className="space-y-4 text-center">
+                            <p>
+                               I've found it incredibly frustrating that the<span className="text-blue-700"> @stripe</span> interface <br /> doesn't have an easy way to create and link invoices <br /> to customers post-sale?
+                            </p>
+                            <p>
+                              Now I have a self-serve solution which will work forever on all <br /> my Stripe accounts <span className="bg-yellow-100.50 px-1">saving me 3-4 hrs a month currently </span>and <br /> probably 50+ hours in the future.
+                            </p>
+                        </div>
+
+                        <div className="flex gap-3">
+                            <div className="avatar">
+                                <div className="w-12 rounded-full">
+                                    <img src="https://img.daisyui.com/images/profile/demo/averagebulk@192.webp" />
+                                </div>
+                            </div>
+                            <div className="flex items-start flex-col ">
+                                <h1 className="font-bold text-lg text-gray-700">
+Dillion V.
+                                </h1>
+                                <p>
+                                    3,107 followers on 𝕏
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
