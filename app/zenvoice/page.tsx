@@ -8,6 +8,7 @@ import LandingVideo from './components/LandingVideo';
 import LandingPricing from "./components/LandingPricing";
 import LandingFaq from "./components/LandingFaq";
 import LandingCta from "./components/LandingCta";
+import LandingFooter from "./components/LandingFooter";
 
 
 
@@ -60,7 +61,9 @@ export default function ZenvoicePage() {
             </section>
               <section className="w-screen h-fit relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] ">
                 <LandingCta />
-
+              </section>
+              <section className="w-screen h-fit relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] ">
+                <LandingFooter />
               </section>
           
 
