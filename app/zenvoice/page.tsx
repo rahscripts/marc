@@ -7,6 +7,7 @@ import LandingWorking from "./components/LandingWorking";
 import LandingVideo from './components/LandingVideo';
 import LandingPricing from "./components/LandingPricing";
 import LandingFaq from "./components/LandingFaq";
+import LandingCta from "./components/LandingCta";
 
 
 
