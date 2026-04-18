@@ -107,7 +107,7 @@ This is useful for accounting, tax reporting, or simply keeping your records org
 
                                 <div className={`overflow-hidden transition-all duration-500 ease-out ${openIndices.has(index) ? "max-h-96" : "max-h-0"
                                     }`}>
-                                    <div className="px-6 max-md:px-2 py-4 ">
+                                    <div className="px-2">
                                         <p className="text-gray-600 font-semibold leading-relaxed whitespace-pre-wrap">
                                             {faq.answer.split('Stripe takes a 0.4% cut (up to $2.00) per sale').map((part, i) => (
                                                 i === 0 ? part : (
