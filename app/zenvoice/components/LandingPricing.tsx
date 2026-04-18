@@ -18,7 +18,7 @@ export default function LandingVideo() {
         "Unlimited Stripe accounts"
     ];
     return (
-          <section className="max-md:m-6   py-20 max-w-5xl mx-auto space-y-30 max-md:space-y-10">
+          <section id="pricing" className="max-md:m-6   py-20 max-w-5xl mx-auto space-y-30 max-md:space-y-10">
                         <div className="flex flex-col items-center justify-center gap-6 max-md:gap-4 text-center">
                             <p className="text-white text-sm rounded-2xl px-2 bg-gray-700 animate-pulse ">
                                 ✨ Launch discount — $50 OFF ✨

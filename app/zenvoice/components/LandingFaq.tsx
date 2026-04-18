@@ -70,7 +70,7 @@ This is useful for accounting, tax reporting, or simply keeping your records org
         }
     ];
     return (
-        <section className="py-20 px-6 max-md:px-4">
+        <section id="faq" className="py-20 faq px-6 max-md:px-4">
             <div className="max-w-7xl mx-auto space-y-30">
                 <div className="flex max-md:flex-col max-md:gap-10">
                     {/* Left Side */}

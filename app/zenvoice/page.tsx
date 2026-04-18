@@ -55,7 +55,7 @@ export default function ZenvoicePage() {
             <LandingComparison />
             <LandingWorking />
             <LandingVideo />
-            <section className="w-screen h-fit relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-slate-100">
+            <section id="pricing" className="w-screen h-fit relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-slate-100">
                 <LandingPricing />
                 <LandingFaq />
             </section>

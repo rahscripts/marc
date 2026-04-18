@@ -22,9 +22,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${gabarito.className} h-full antialiased`}
+      className={`${gabarito.className} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full scroll-smooth flex flex-col">{children}</body>
     </html>
   );
 }
