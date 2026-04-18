@@ -58,7 +58,11 @@ export default function ZenvoicePage() {
                 <LandingPricing />
                 <LandingFaq />
             </section>
+              <section className="w-screen h-fit relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] ">
+                <LandingCta />
 
+              </section>
+          
 
         </div>
     )
