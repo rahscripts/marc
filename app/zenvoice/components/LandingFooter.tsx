@@ -94,7 +94,7 @@ export default function LandingFooter() {
                             <Image src={"/mylogo.png"} width={60} height={60} alt="my logo"  className="rounded-full" />
                         </div>
                         <p className="text-gray-700 text-sm">
-                            Hey Curious 👋 I&apos;m <a target="_blank" href="https://xrahman.com" className="underline font-semibold cursor-pointer link link-hover">Rahman</a>, the creator of Zenvoice. You can follow my work on <a target="_blank" href="https://x.com/xrahman_" className="underline font-semibold cursor-pointer link link-hover">Twitter</a>.
+                            Hey Curious 👋 I&apos;m <a target="_blank" href="https://xrahman.com" className="underline font-semibold cursor-pointer link link-hover">Rahman</a>, the creator of Zenvoice Copy Page. You can follow my work on <a target="_blank" href="https://x.com/xrahman_" className="underline font-semibold cursor-pointer link link-hover">Twitter</a>.
                         </p>
                     </div>
                 </div>
