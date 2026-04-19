@@ -23,16 +23,16 @@ export default function ZenvoicePage() {
     ];
     return (
         <div className="max-w-5xl mx-auto w-full">
-            <section className="w-screen h-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-emerald-500/20">
+            <section className="w-screen h-auto max-md:h-auto relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-emerald-500/20">
                 <div className="max-w-5xl mx-auto w-full">
                     <LandingHeader />
-                    <section className="h-screen flex mt-30 items-center justify-start flex-col gap-6 text-center px-4">
+                    <section className="min-h-screen max-md:h-auto flex mt-30 max-md:mt-10 items-center justify-start flex-col gap-6 text-center p-2">
                         <p><span className="text-xs text-gray-500">Made for</span> <span className="text-blue-600 font-semibold tracking-tighter">stripe</span></p>
-                        <h1 className="text-6xl tracking-tight font-black max-w-2xl">
+                        <h1 className="text-6xl max-md:text-3xl tracking-tight font-black max-w-2xl">
                             Stop paying <span className="italic text-red-500">0.4%</span> <br />
                             for Stripe invoices
                         </h1>
-                        <p className="text-lg text-gray-600 max-w-xl">
+                        <p className="text-lg max-md:text-base text-gray-600 max-w-xl">
                             Let your customers generate, edit, and download <br /> their invoices, with just<span className="underline italic decoration-emerald-600 decoration-2 decoration-wavy"> a link.</span>
                         </p>
                         <div className="flex flex-col items-start gap-2">

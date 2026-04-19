@@ -2,7 +2,7 @@ import FiveStars from "./ui/FiveStars";
 
 export default function LandingVideo() {
     return (
-         <section className="my-40 max-md:my-20 space-y-25 max-md:space-y-10"> 
+         <section className="my-40 max-md:my-20 space-y-25 max-md:space-y-10 p-2"> 
         
         
         
@@ -23,29 +23,29 @@ export default function LandingVideo() {
                             </div>
                         </div>
         
-                          <div className="flex flex-col items-center justify-center gap-6">
+                          <div className="flex flex-col items-center justify-center gap-6 max-md:gap-4 p-2">
                                         <FiveStars />
                         
                                         <div className="space-y-4 text-center">
-                                            <p>
+                                            <p className="max-md:text-sm">
                                                ZenVoice solves a crazy pain of my biz.
                                             </p>
-                                            <p>
+                                            <p className="max-md:text-sm">
                                               My customer support agent is getting requests <br /> regarding invoices 2-3 times A DAY. I purchased and <br /><span className="bg-yellow-100/50 px-1">integrated it to my Stripe account in less than 5min.</span>
                                               </p>
                                         </div>
                         
-                                        <div className="flex gap-3">
+                                        <div className="flex gap-3 max-md:flex-col max-md:items-center">
                                             <div className="avatar">
                                                 <div className="w-12 rounded-full">
                                                     <img src="https://img.daisyui.com/images/profile/demo/averagebulk@192.webp" />
                                                 </div>
                                             </div>
-                                            <div className="flex items-start flex-col ">
+                                            <div className="flex items-start max-md:items-center max-md:text-center flex-col ">
                                                 <h1 className="font-bold text-lg text-gray-700">
                                                     Roey Lalazar
                                                 </h1>
-                                                <p>
+                                                <p className="text-sm">
                                                     1,107 followers on 𝕏
                                                 </p>
                                             </div>

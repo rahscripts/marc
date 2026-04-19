@@ -21,12 +21,12 @@ export default function LandingComparison() {
 
 
     return (
-        <section className="my-30 space-y-10 text-center">
-            <h1 className="text-5xl text-gray-700 font-extrabold tracking-tight">
+        <section className="my-30 max-md:my-10 space-y-10 text-center p-2">
+            <h1 className="text-5xl max-md:text-2xl text-gray-700 font-extrabold tracking-tight">
                 Why pay Stripe for a PDF?
             </h1>
-            <div className="flex gap-4 max-md:flex-col">
-                <div className="bg-red-100 p-12 flex-1 rounded-lg m-4 space-y-2">
+            <div className="flex gap-4 max-md:flex-col max-md:gap-3">
+                <div className="bg-red-100 p-12 max-md:p-6 flex-1 rounded-lg m-4 max-md:m-2 space-y-2">
                     <h1 className="font-bold text-lg text-start text-red-700">Stripe invoices</h1>
                     {
                         stripeInvoices.map((item, index) => (
@@ -40,7 +40,7 @@ export default function LandingComparison() {
                     }
                 </div>
 
-                <div className="bg-green-100 flex-1 p-12 rounded-lg m-4 space-y-2">
+                <div className="bg-green-100 flex-1 p-12 max-md:p-6 rounded-lg m-4 max-md:m-2 space-y-2">
                     <h1 className="font-bold text-lg text-start text-green-700">ZenVoice</h1>
                     {
                         zenVoice.map((item, index) => (
@@ -59,28 +59,28 @@ export default function LandingComparison() {
 
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-6">
+            <div className="flex flex-col items-center justify-center gap-6 max-md:gap-4 p-2">
                 <FiveStars />
 
-                <div className="space-y-4">
-                    <p>
+                <div className="space-y-4 text-center">
+                    <p className="max-md:text-sm">
                         <span className="bg-yellow-100/50 px-1">I don't want to pay Stripe $2 for every invoice.</span> I don't want to <br /> spend 10 minutes manually crafting every invoice either. <br />
                     </p>
-                    <p>
+                    <p className="max-md:text-sm">
                         Zenvoice solved this problem once and for all. The app is <br /> simple, but it nails the job perfectly.</p>
                 </div>
 
-                <div className="flex gap-3">
+                <div className="flex gap-3 max-md:flex-col max-md:items-center">
                     <div className="avatar">
                         <div className="w-12 rounded-full">
                             <img src="https://img.daisyui.com/images/profile/demo/averagebulk@192.webp" />
                         </div>
                     </div>
-                    <div className="flex items-start flex-col ">
+                    <div className="flex items-start max-md:items-center max-md:text-center flex-col ">
                         <h1>
                             Dan kulkov
                         </h1>
-                        <p>
+                        <p className="text-sm">
                             23.1k followers on X
                         </p>
                     </div>
