@@ -48,6 +48,8 @@ export default function LandingVideo() {
                                     <GetZenvoiceBtn extraClass="w-full"/>
                                     <p className="text-sm max-md:text-xs">One-time payment, <span className="underline">then it's yours forever</span></p>
                                 </div>
+                           </div>
+                            <div className="flex flex-1 relative border border-green-500 flex-col gap-3 items-start justify-start bg-white p-10 max-md:p-6 rounded-lg">
                                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
     <span className="bg-emerald-600 text-white text-xs font-semibold px-4 py-1 rounded-full">
       BUSY FOUNDERS' CHOICE
