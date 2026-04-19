@@ -30,7 +30,7 @@ export default function LandingVideo() {
                                 Ditch the 0.4% Stripe Invoicing fee, reduce customer support, <br /> and focus on your startup. 1-minute no-code setup.
                             </p>
                         </div>
-                        <div className="flex gap-8 max-md:gap-4 max-md:flex-col md:m-8 max-md:m-0 max-md:mx-auto">
+                        <div className="flex gap-8 max-md:gap-8 max-md:p-8 max-sm:p-4 max-md:flex-col md:m-8 max-md:m-0 max-md:mx-auto">
                            <div className="flex flex-1 flex-col gap-3 items-start justify-start bg-white p-10 max-md:p-6 rounded-lg">
                              <div className="flex gap-1 items-baseline max-md:flex-wrap">
                                 <p className="line-through max-md:text-sm">$99</p> <p className="text-5xl max-md:text-3xl font-extrabold">$49</p> <p className="uppercase text-xs max-md:text-xs">usd</p>
